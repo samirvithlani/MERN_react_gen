@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
+import { Footer } from "./components/Footer";
 
 function App() {
+  //pure js
+  var name = "Amit";
+  var age = 30;
+  var isMarried = true;
+  var student = {
+    name: "naveen",
+    marks: 10,
+  }
+
+  var style = {
+    color:"red",
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <h1>APP</h1>
+      <h2>Name = {name}</h2>
+      <h3>Age = {age}</h3>
+      <h4>married {isMarried === true ? "Married":"Not Married"}</h4>
+      <h4>{isMarried === true ? <p>Married</p>:"Not Married"}</h4>
+      <h1>{student.name}</h1>
+      {
+        student.marks >= 80 ? <h1 style={{color:"green"}}>Grade A</h1>:<h1 style={style}>Grade B</h1>
+      }
+      <Footer/>
     </div>
   );
 }
