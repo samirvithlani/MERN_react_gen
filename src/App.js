@@ -2,8 +2,14 @@ import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
+import { UserList } from "./components/UserList";
+import { Students } from "./propsdemo/Students";
 
 function App() {
+
+  var title = "Royal technosoft";
+  var addresss ="Ahmedabad"
+  
   //pure js
   var name = "Amit";
   var age = 30;
@@ -18,7 +24,9 @@ function App() {
   }
   return (
     <div className="App">
-      <Header/>
+      <Header headertitle = {title}/>
+      <Students t = {title} add = {addresss} style = {style}/>
+      {/* <Header/>
       <h1>APP</h1>
       <h2>Name = {name}</h2>
       <h3>Age = {age}</h3>
@@ -28,7 +36,9 @@ function App() {
       {
         student.marks >= 80 ? <h1 style={{color:"green"}}>Grade A</h1>:<h1 style={style}>Grade B</h1>
       }
-      <Footer/>
+      <Footer/> */}
+      {/* <UserList/> */} 
+      {/* how to iterate daat using loop */}
     </div>
   );
 }
