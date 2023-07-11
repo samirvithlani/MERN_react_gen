@@ -5,6 +5,8 @@ import { Footer } from "./components/Footer";
 import { UserList } from "./components/UserList";
 import { Students } from "./propsdemo/Students";
 import { Employee } from "./propsdemo/Employee";
+import { UserForm } from "./components/UserForm";
+import { EmployeeForm } from "./components/EmployeeForm";
 
 function App() {
 
@@ -26,7 +28,9 @@ function App() {
   return (
     <div className="App">
       <Header headertitle = {title}/>
-      <Employee/>
+      {/* <UserForm/> */}
+      <EmployeeForm/>
+      {/* <Employee/> */}
       {/* <Students t = {title} add = {addresss} style = {style}/> */}
       {/* <Header/>
       <h1>APP</h1>
