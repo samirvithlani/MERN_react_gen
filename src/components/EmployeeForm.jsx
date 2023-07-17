@@ -4,6 +4,7 @@ export const EmployeeForm = () => {
     const submit = (e)=>{
         e.preventDefault()
         alert(name+" "+age+" "+designation)
+        //console.log(name+" "+age+" "+designation)
     }
     const [name, setname] = useState('')
     const [age, setage] = useState()

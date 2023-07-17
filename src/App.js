@@ -7,6 +7,8 @@ import { Students } from "./propsdemo/Students";
 import { Employee } from "./propsdemo/Employee";
 import { UserForm } from "./components/UserForm";
 import { EmployeeForm } from "./components/EmployeeForm";
+import { StudentReg } from "./components/StudentReg";
+import { ProductReg } from "./components/ProductReg";
 
 function App() {
 
@@ -28,8 +30,10 @@ function App() {
   return (
     <div className="App">
       <Header headertitle = {title}/>
+      {/* <StudentReg/> */}
+      <ProductReg/>
       {/* <UserForm/> */}
-      <EmployeeForm/>
+      {/* <EmployeeForm/> */}
       {/* <Employee/> */}
       {/* <Students t = {title} add = {addresss} style = {style}/> */}
       {/* <Header/>

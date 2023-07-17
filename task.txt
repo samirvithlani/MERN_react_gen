@@ -1,0 +1,2 @@
+book registration form with validation
+player registration form with validation
