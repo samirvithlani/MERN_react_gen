@@ -3,12 +3,13 @@ import "./App.css";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
 import { UserList } from "./components/UserList";
-import { Students } from "./propsdemo/Students";
+import { Student } from "./components/students/Student";
 import { Employee } from "./propsdemo/Employee";
 import { UserForm } from "./components/UserForm";
 import { EmployeeForm } from "./components/EmployeeForm";
 import { StudentReg } from "./components/StudentReg";
 import { ProductReg } from "./components/ProductReg";
+import { AddStudent } from "./components/students/AddStudent";
 
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
     <div className="App">
       <Header headertitle = {title}/>
       {/* <StudentReg/> */}
-      <ProductReg/>
+      {/* <ProductReg/> */}
+      <Student/>
       {/* <UserForm/> */}
       {/* <EmployeeForm/> */}
       {/* <Employee/> */}
