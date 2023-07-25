@@ -10,6 +10,14 @@ import { EmployeeForm } from "./components/EmployeeForm";
 import { StudentReg } from "./components/StudentReg";
 import { ProductReg } from "./components/ProductReg";
 import { AddStudent } from "./components/students/AddStudent";
+import { Route, Routes } from "react-router-dom";
+import { AboutUs } from "./components/AboutUs";
+import { ContactUs } from "./components/students/ContactUs";
+import { Manager } from "./components/Manager";
+import { Ceo } from "./components/Ceo";
+import { DashBoard } from "./components/DashBoard";
+import { PagenotFound } from "./components/PagenotFound";
+import { Director } from "./components/Director";
 
 function App() {
 
@@ -31,26 +39,17 @@ function App() {
   return (
     <div className="App">
       <Header headertitle = {title}/>
-      {/* <StudentReg/> */}
-      {/* <ProductReg/> */}
-      <Student/>
-      {/* <UserForm/> */}
-      {/* <EmployeeForm/> */}
-      {/* <Employee/> */}
-      {/* <Students t = {title} add = {addresss} style = {style}/> */}
-      {/* <Header/>
-      <h1>APP</h1>
-      <h2>Name = {name}</h2>
-      <h3>Age = {age}</h3>
-      <h4>married {isMarried === true ? "Married":"Not Married"}</h4>
-      <h4>{isMarried === true ? <p>Married</p>:"Not Married"}</h4>
-      <h1>{student.name}</h1>
-      {
-        student.marks >= 80 ? <h1 style={{color:"green"}}>Grade A</h1>:<h1 style={style}>Grade B</h1>
-      }
-      <Footer/> */}
-      {/* <UserList/> */} 
-      {/* how to iterate daat using loop */}
+      <Routes>
+        <Route path="/aboutus" element={<AboutUs/>}></Route>
+        <Route path ="/contactus" element ={<ContactUs/>}></Route>
+        <Route path ="/contactus/manager" element ={<Manager/>}></Route>
+        <Route  path = "/contactus/ceo" element ={<Ceo/>}></Route>
+        <Route path ="/contactus/director/:id" element ={<Director/>}></Route>
+        <Route path ="/" element = {<DashBoard/>}></Route>
+        {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
+        <Route path = "/*" element = {<h1>PAGE NOT FOUND</h1>}></Route>
+      </Routes>
+     
     </div>
   );
 }

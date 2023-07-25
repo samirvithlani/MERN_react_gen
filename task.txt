@@ -1,2 +1,36 @@
+ {/* <StudentReg/> */}
+      {/* <ProductReg/> */}
+      {/* <Student/> */}
+      {/* <UserForm/> */}
+      {/* <EmployeeForm/> */}
+      {/* <Employee/> */}
+      {/* <Students t = {title} add = {addresss} style = {style}/> */}
+      {/* <Header/>
+      <h1>APP</h1>
+      <h2>Name = {name}</h2>
+      <h3>Age = {age}</h3>
+      <h4>married {isMarried === true ? "Married":"Not Married"}</h4>
+      <h4>{isMarried === true ? <p>Married</p>:"Not Married"}</h4>
+      <h1>{student.name}</h1>
+      {
+        student.marks >= 80 ? <h1 style={{color:"green"}}>Grade A</h1>:<h1 style={style}>Grade B</h1>
+      }
+      <Footer/> */}
+      {/* <UserList/> */} 
+      {/* how to iterate daat using loop */}
+
 book registration form with validation
 player registration form with validation
+
+
+
+react routing....
+
+<a href ="url">
+
+react router dom v6.x
+<BrowserRouter>
+<Routes>
+<Route></route>
+</>
+</>
