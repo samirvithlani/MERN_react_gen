@@ -43,6 +43,16 @@ export default function Header(props) {
                 contact US
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/store">
+                STORE
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/getstoredata">
+                STORE Data
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -18,6 +18,8 @@ import { Ceo } from "./components/Ceo";
 import { DashBoard } from "./components/DashBoard";
 import { PagenotFound } from "./components/PagenotFound";
 import { Director } from "./components/Director";
+import { StoreData } from "./components/StoreData";
+import { GetStorageDate } from "./components/GetStorageDate";
 
 function App() {
 
@@ -45,6 +47,8 @@ function App() {
         <Route path ="/contactus/manager" element ={<Manager/>}></Route>
         <Route  path = "/contactus/ceo" element ={<Ceo/>}></Route>
         <Route path ="/contactus/director/:id" element ={<Director/>}></Route>
+        <Route path = "/store" element = {<StoreData/>}></Route>
+        <Route path="/getstoredata" element ={<GetStorageDate/>}></Route>
         <Route path ="/" element = {<DashBoard/>}></Route>
         {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
         <Route path = "/*" element = {<h1>PAGE NOT FOUND</h1>}></Route>
