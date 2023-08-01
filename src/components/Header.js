@@ -9,6 +9,7 @@ export default function Header(props) {
     <>
       <div className="header">
         <h1>HEADER</h1>
+        <Link className="btn btn-primary" to ="/login">LOGIN</Link>
       </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">

@@ -20,12 +20,13 @@ import { PagenotFound } from "./components/PagenotFound";
 import { Director } from "./components/Director";
 import { StoreData } from "./components/StoreData";
 import { GetStorageDate } from "./components/GetStorageDate";
+import { LoginComponent } from "./components/LoginComponent";
+import ProtectedRoute from "./hooks/ProtectedRoutes";
 
 function App() {
-
   var title = "Royal technosoft";
-  var addresss ="Ahmedabad"
-  
+  var addresss = "Ahmedabad";
+
   //pure js
   var name = "Amit";
   var age = 30;
@@ -33,27 +34,30 @@ function App() {
   var student = {
     name: "naveen",
     marks: 10,
-  }
+  };
 
   var style = {
-    color:"red",
-  }
+    color: "red",
+  };
   return (
     <div className="App">
-      <Header headertitle = {title}/>
+      <Header headertitle={title} />
       <Routes>
-        <Route path="/aboutus" element={<AboutUs/>}></Route>
-        <Route path ="/contactus" element ={<ContactUs/>}></Route>
-        <Route path ="/contactus/manager" element ={<Manager/>}></Route>
-        <Route  path = "/contactus/ceo" element ={<Ceo/>}></Route>
-        <Route path ="/contactus/director/:id" element ={<Director/>}></Route>
-        <Route path = "/store" element = {<StoreData/>}></Route>
-        <Route path="/getstoredata" element ={<GetStorageDate/>}></Route>
-        <Route path ="/" element = {<DashBoard/>}></Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/aboutus" element={<AboutUs />}></Route>
+          <Route path="/contactus" element={<ContactUs />}></Route>
+        </Route>
+
+        <Route path="/contactus/manager" element={<Manager />}></Route>
+        <Route path="/contactus/ceo" element={<Ceo />}></Route>
+        <Route path="/contactus/director/:id" element={<Director />}></Route>
+        <Route path="/store" element={<StoreData />}></Route>
+        <Route path="/getstoredata" element={<GetStorageDate />}></Route>
+        <Route path="/" element={<DashBoard />}></Route>
         {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
-        <Route path = "/*" element = {<h1>PAGE NOT FOUND</h1>}></Route>
+        <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
+        <Route path="/login" element={<LoginComponent />}></Route>
       </Routes>
-     
     </div>
   );
 }
