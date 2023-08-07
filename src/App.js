@@ -22,6 +22,9 @@ import { StoreData } from "./components/StoreData";
 import { GetStorageDate } from "./components/GetStorageDate";
 import { LoginComponent } from "./components/LoginComponent";
 import ProtectedRoute from "./hooks/ProtectedRoutes";
+import { ApiDemo1 } from "./components/ApiDemo1";
+import { ApiDemo2 } from "./components/ApiDemo2";
+import { ApiDemo3 } from "./components/ApiDemo3";
 
 function App() {
   var title = "Royal technosoft";
@@ -53,6 +56,9 @@ function App() {
         <Route path="/contactus/director/:id" element={<Director />}></Route>
         <Route path="/store" element={<StoreData />}></Route>
         <Route path="/getstoredata" element={<GetStorageDate />}></Route>
+        <Route path ="/apidemo1" element={<ApiDemo1/>}></Route>
+        <Route path ="/apidemo2" element={<ApiDemo2/>}></Route>
+        <Route path ="/apidemo3" element={<ApiDemo3/>}></Route>
         <Route path="/" element={<DashBoard />}></Route>
         {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
         <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
