@@ -25,6 +25,8 @@ import ProtectedRoute from "./hooks/ProtectedRoutes";
 import { ApiDemo1 } from "./components/ApiDemo1";
 import { ApiDemo2 } from "./components/ApiDemo2";
 import { ApiDemo3 } from "./components/ApiDemo3";
+import { ApidDemo4 } from "./components/ApidDemo4";
+import { ApiDemo5 } from "./components/ApiDemo5";
 
 function App() {
   var title = "Royal technosoft";
@@ -59,6 +61,8 @@ function App() {
         <Route path ="/apidemo1" element={<ApiDemo1/>}></Route>
         <Route path ="/apidemo2" element={<ApiDemo2/>}></Route>
         <Route path ="/apidemo3" element={<ApiDemo3/>}></Route>
+        <Route path ="/apidemo4" element={<ApidDemo4/>}></Route>
+        <Route path ="/apidemo5" element={<ApiDemo5/>}></Route>
         <Route path="/" element={<DashBoard />}></Route>
         {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
         <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>

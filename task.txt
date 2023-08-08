@@ -37,3 +37,8 @@ react router dom v6.x
 
 Protected Routing....
 custome Hook
+
+
+
+lofe cycle  hooks
+when your componen get load.... useEffect
