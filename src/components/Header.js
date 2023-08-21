@@ -84,6 +84,12 @@ export default function Header(props) {
                 API DEMO 6
               </Link>
             </li>
+            
+            <li class="nav-item">
+              <Link class="nav-link" to="/usercompq">
+              usercompq
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -28,6 +28,9 @@ import { ApiDemo3 } from "./components/ApiDemo3";
 import { ApidDemo4 } from "./components/ApidDemo4";
 import { ApiDemo5 } from "./components/ApiDemo5";
 import { ApiDemo6 } from "./components/ApiDemo6";
+import { UserComponentQ } from "./components/UserComponentQ";
+import { Counter } from "./components/Counter";
+import axios from "axios";
 
 function App() {
   var title = "Royal technosoft";
@@ -45,9 +48,13 @@ function App() {
   var style = {
     color: "red",
   };
+
+  axios.defaults.baseURL = "https://node5.onrender.com";
+  //axios.defaults.baseURL = "http://localhost:5000";
   return (
     <div className="App">
       <Header headertitle={title} />
+      
       <Routes>
         <Route element={<ProtectedRoute />}>
           <Route path="/aboutus" element={<AboutUs />}></Route>
@@ -65,6 +72,7 @@ function App() {
         <Route path ="/apidemo4" element={<ApidDemo4/>}></Route>
         <Route path ="/apidemo5" element={<ApiDemo5/>}></Route>
         <Route path ="/update/:id" element={<ApiDemo6/>}></Route>
+        <Route path = "/usercompq" element={<UserComponentQ/>}></Route>
         <Route path="/" element={<DashBoard />}></Route>
         {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
         <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
