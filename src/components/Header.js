@@ -90,6 +90,11 @@ export default function Header(props) {
               usercompq
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/adduserq">
+              ADD USER q
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

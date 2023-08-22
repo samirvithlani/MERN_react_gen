@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useQuery } from "react-query"
+import { useMutation, useQuery } from "react-query"
 
 const fetchUserData =()=>{
 
@@ -9,5 +9,19 @@ const fetchUserData =()=>{
 
 export const useFetchUserData =()=>{
     
-    return useQuery('user',fetchUserData)
+    return useQuery('user',fetchUserData,{
+        retry:10,
+        retryDelay:100,
+        refetchOnMount:false,
+        enabled:false
+    })
+}
+
+const addUserData = (user)=>{
+
+    console.log("user obj...",user)
+    return axios.post("/user/user",user)
+}
+export const useAddUserData =()=>{
+    return useMutation(addUserData)
 }

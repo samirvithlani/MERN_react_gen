@@ -3,7 +3,7 @@ import { useFetchUserData } from "../query/UserQuery";
 
 export const UserComponentQ = () => {
   //const {register,handleSubmit,formState:{errors}} = useForm();
-  const { data, isLoading, isError } = useFetchUserData();
+  const { data, isLoading, isError,refetch } = useFetchUserData();
   useEffect(() => {
     console.log("data", data);
     console.log("isLoading", isLoading);
@@ -20,7 +20,7 @@ export const UserComponentQ = () => {
         isLoading && <h1>Loading...</h1>
       }
       
-      
+      <button onClick={()=>refetch()}>Refetch</button>
       <table className="table table-bordered">
       
         <thead>
