@@ -95,6 +95,16 @@ export default function Header(props) {
               ADD USER q
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/jsonform">
+              JSON FORM
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/buttondemo">
+              BUTTON DEMO
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

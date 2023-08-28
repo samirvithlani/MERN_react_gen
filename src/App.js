@@ -32,6 +32,8 @@ import { UserComponentQ } from "./components/UserComponentQ";
 import { Counter } from "./components/Counter";
 import axios from "axios";
 import { AddUserWithQ } from "./components/AddUserWithQ";
+import { JsonForm } from "./components/JsonForm";
+import { ButtonDemo } from "./mui/ButtonDemo";
 
 function App() {
   var title = "Royal technosoft";
@@ -75,6 +77,8 @@ function App() {
         <Route path ="/update/:id" element={<ApiDemo6/>}></Route>
         <Route path = "/usercompq" element={<UserComponentQ/>}></Route>
         <Route path = "/adduserq" element={<AddUserWithQ/>}></Route>
+        <Route path = "/jsonform" element = {<JsonForm/>}></Route>
+        <Route path="/buttondemo" element={<ButtonDemo/>}></Route>
         <Route path="/" element={<DashBoard />}></Route>
         {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
         <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
