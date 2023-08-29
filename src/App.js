@@ -34,6 +34,7 @@ import axios from "axios";
 import { AddUserWithQ } from "./components/AddUserWithQ";
 import { JsonForm } from "./components/JsonForm";
 import { ButtonDemo } from "./mui/ButtonDemo";
+import { FilterUser } from "./components/FilterUser";
 
 function App() {
   var title = "Royal technosoft";
@@ -83,6 +84,7 @@ function App() {
         {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
         <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
         <Route path="/login" element={<LoginComponent />}></Route>
+        <Route path="/filteruser" element = {<FilterUser/>}></Route>
       </Routes>
     </div>
   );
