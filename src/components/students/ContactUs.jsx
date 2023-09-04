@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../../context'
 
 export const ContactUs = () => {
   var users = [
@@ -11,10 +12,11 @@ export const ContactUs = () => {
       name:"sumit"
     }
   ]
+  const {style} = useContext(AppContext)
   return (
     <div>
         <h1>Contact Us</h1>
-        <ul>
+        <ul style={style}>
             <li>
                 <Link to ="/contactus/manager">MANAGER</Link>
             </li>

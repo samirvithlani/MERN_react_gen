@@ -35,6 +35,8 @@ import { AddUserWithQ } from "./components/AddUserWithQ";
 import { JsonForm } from "./components/JsonForm";
 import { ButtonDemo } from "./mui/ButtonDemo";
 import { FilterUser } from "./components/FilterUser";
+import { ToDo } from "./contextdemo/ToDo";
+import { AppContext } from "./context";
 
 function App() {
   var title = "Royal technosoft";
@@ -58,34 +60,37 @@ function App() {
   return (
     <div className="App">
       <Header headertitle={title} />
-      
-      <Routes>
-        <Route element={<ProtectedRoute />}>
-          <Route path="/aboutus" element={<AboutUs />}></Route>
-          <Route path="/contactus" element={<ContactUs />}></Route>
-        </Route>
+      <AppContext.Provider value={{ style }}>
+        
+        <Routes>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/aboutus" element={<AboutUs />}></Route>
+            <Route path="/contactus" element={<ContactUs />}></Route>
+          </Route>
 
-        <Route path="/contactus/manager" element={<Manager />}></Route>
-        <Route path="/contactus/ceo" element={<Ceo />}></Route>
-        <Route path="/contactus/director/:id" element={<Director />}></Route>
-        <Route path="/store" element={<StoreData />}></Route>
-        <Route path="/getstoredata" element={<GetStorageDate />}></Route>
-        <Route path ="/apidemo1" element={<ApiDemo1/>}></Route>
-        <Route path ="/apidemo2" element={<ApiDemo2/>}></Route>
-        <Route path ="/apidemo3" element={<ApiDemo3/>}></Route>
-        <Route path ="/apidemo4" element={<ApidDemo4/>}></Route>
-        <Route path ="/apidemo5" element={<ApiDemo5/>}></Route>
-        <Route path ="/update/:id" element={<ApiDemo6/>}></Route>
-        <Route path = "/usercompq" element={<UserComponentQ/>}></Route>
-        <Route path = "/adduserq" element={<AddUserWithQ/>}></Route>
-        <Route path = "/jsonform" element = {<JsonForm/>}></Route>
-        <Route path="/buttondemo" element={<ButtonDemo/>}></Route>
-        <Route path="/" element={<DashBoard />}></Route>
-        {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
-        <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
-        <Route path="/login" element={<LoginComponent />}></Route>
-        <Route path="/filteruser" element = {<FilterUser/>}></Route>
-      </Routes>
+          <Route path="/contactus/manager" element={<Manager />}></Route>
+          <Route path="/contactus/ceo" element={<Ceo />}></Route>
+          <Route path="/contactus/director/:id" element={<Director />}></Route>
+          <Route path="/store" element={<StoreData />}></Route>
+          <Route path="/getstoredata" element={<GetStorageDate />}></Route>
+          <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+          <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+          <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+          <Route path="/apidemo4" element={<ApidDemo4 />}></Route>
+          <Route path="/apidemo5" element={<ApiDemo5 />}></Route>
+          <Route path="/update/:id" element={<ApiDemo6 />}></Route>
+          <Route path="/usercompq" element={<UserComponentQ />}></Route>
+          <Route path="/adduserq" element={<AddUserWithQ />}></Route>
+          <Route path="/jsonform" element={<JsonForm />}></Route>
+          <Route path="/buttondemo" element={<ButtonDemo />}></Route>
+          <Route path="/" element={<DashBoard />}></Route>
+          <Route path="/todo" element={<ToDo />}></Route>
+          {/* <Route path ="/*" element ={<PagenotFound/>}></Route> */}
+          <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
+          <Route path="/login" element={<LoginComponent />}></Route>
+          <Route path="/filteruser" element={<FilterUser />}></Route>
+        </Routes>
+      </AppContext.Provider>
     </div>
   );
 }
