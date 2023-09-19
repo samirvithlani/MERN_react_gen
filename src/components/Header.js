@@ -116,6 +116,16 @@ export default function Header(props) {
               todo
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/product1">
+              product
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/cart">
+              CART
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

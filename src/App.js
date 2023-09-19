@@ -37,6 +37,8 @@ import { ButtonDemo } from "./mui/ButtonDemo";
 import { FilterUser } from "./components/FilterUser";
 import { ToDo } from "./contextdemo/ToDo";
 import { AppContext } from "./context";
+import { ProductComp } from "./components/ProductComp";
+import { CartComp } from "./components/CartComp";
 
 function App() {
   var title = "Royal technosoft";
@@ -61,7 +63,6 @@ function App() {
     <div className="App">
       <Header headertitle={title} />
       <AppContext.Provider value={{ style }}>
-        
         <Routes>
           <Route element={<ProtectedRoute />}>
             <Route path="/aboutus" element={<AboutUs />}></Route>
@@ -89,6 +90,8 @@ function App() {
           <Route path="/*" element={<h1>PAGE NOT FOUND</h1>}></Route>
           <Route path="/login" element={<LoginComponent />}></Route>
           <Route path="/filteruser" element={<FilterUser />}></Route>
+          <Route path="/product1" element={<ProductComp/>}></Route>
+          <Route path="/cart" element ={<CartComp/>}></Route>
         </Routes>
       </AppContext.Provider>
     </div>
