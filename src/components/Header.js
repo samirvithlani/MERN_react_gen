@@ -1,14 +1,20 @@
 //function////
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../header.css";
 
 export default function Header(props) {
   console.log("header props", props);
+  //state reducer name. intitateName.ourObjectName
+  const users =  useSelector(state=>state.user.usersData.data)
+  console.log(users)
+  
+  
   return (
     <>
       <div className="header">
-        <h1>HEADER</h1>
+        <h1>HEADER {users?.length}</h1>
         <Link className="btn btn-primary" to ="/login">LOGIN</Link>
       </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -124,6 +130,12 @@ export default function Header(props) {
             <li class="nav-item">
               <Link class="nav-link" to="/cart">
               CART
+              </Link>
+            </li>
+            
+            <li class="nav-item">
+              <Link class="nav-link" to="/reduxuser">
+              reduxuser
               </Link>
             </li>
           </ul>
