@@ -7,15 +7,16 @@ import "../header.css";
 export default function Header(props) {
   console.log("header props", props);
   //state reducer name. intitateName.ourObjectName
-  const users =  useSelector(state=>state.user.usersData.data)
-  console.log(users)
-  
-  
+  const users = useSelector((state) => state.user.usersData.data);
+  console.log(users);
+
   return (
     <>
       <div className="header">
         <h1>HEADER {users?.length}</h1>
-        <Link className="btn btn-primary" to ="/login">LOGIN</Link>
+        <Link className="btn btn-primary" to="/login">
+          LOGIN
+        </Link>
       </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
@@ -90,52 +91,57 @@ export default function Header(props) {
                 API DEMO 6
               </Link>
             </li>
-            
+
             <li class="nav-item">
               <Link class="nav-link" to="/usercompq">
-              usercompq
+                usercompq
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/adduserq">
-              ADD USER q
+                ADD USER q
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/jsonform">
-              JSON FORM
+                JSON FORM
               </Link>
             </li>
-            
+
             <li class="nav-item">
               <Link class="nav-link" to="/buttondemo">
-              BUTTON DEMO
+                BUTTON DEMO
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/filteruser">
-              filteruser  
+                filteruser
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/todo">
-              todo
+                todo
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/product1">
-              product
+                product
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/cart">
-              CART
+                CART
               </Link>
             </li>
-            
+
             <li class="nav-item">
               <Link class="nav-link" to="/reduxuser">
-              reduxuser
+                reduxuser
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/muitable">
+                MUI TABlE
               </Link>
             </li>
           </ul>

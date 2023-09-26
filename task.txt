@@ -44,3 +44,9 @@ lofe cycle  hooks
 when your componen get load.... useEffect
 
 add required validation in dynamic form...
+
+task --> white...
+dark -->
+
+<--- slider --->
+object.... json object useState --> [{id:1,name:raj,age:20},{id:2,name:raj,age:20},{id:3,name:raj,age:20}]

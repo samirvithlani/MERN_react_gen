@@ -40,6 +40,7 @@ import { AppContext } from "./context";
 import { ProductComp } from "./components/ProductComp";
 import { CartComp } from "./components/CartComp";
 import { ReduxUser } from "./components/ReduxUser";
+import { MuiTable } from "./mui/MuiTable";
 
 function App() {
   var title = "Royal technosoft";
@@ -94,6 +95,7 @@ function App() {
           <Route path="/product1" element={<ProductComp/>}></Route>
           <Route path="/cart" element ={<CartComp/>}></Route>
           <Route path ="/reduxuser" element={<ReduxUser/>}></Route>
+          <Route path ="/muitable" element={<MuiTable/>}></Route>
         </Routes>
       </AppContext.Provider>
     </div>
