@@ -41,6 +41,7 @@ import { ProductComp } from "./components/ProductComp";
 import { CartComp } from "./components/CartComp";
 import { ReduxUser } from "./components/ReduxUser";
 import { MuiTable } from "./mui/MuiTable";
+import { ApiDemowHeader } from "./components/ApiDemowHeader";
 
 function App() {
   var title = "Royal technosoft";
@@ -80,7 +81,7 @@ function App() {
           <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
           <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
           <Route path="/apidemo4" element={<ApidDemo4 />}></Route>
-          <Route path="/apidemo5" element={<ApiDemo5 />}></Route>
+          <Route path="/apidemo5" element={<ApiDemowHeader />}></Route>
           <Route path="/update/:id" element={<ApiDemo6 />}></Route>
           <Route path="/usercompq" element={<UserComponentQ />}></Route>
           <Route path="/adduserq" element={<AddUserWithQ />}></Route>
