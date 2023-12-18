@@ -13,7 +13,7 @@ export default function Header(props) {
   return (
     <>
       <div className="header">
-        <h1>HEADER {users?.length}</h1>
+        <h1>HEADER 2 {users?.length}</h1>
         <Link className="btn btn-primary" to="/login">
           LOGIN
         </Link>
